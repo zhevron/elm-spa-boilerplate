@@ -2,10 +2,10 @@ module Update exposing (update)
 
 import Navigation
 
-import Views.Home.Update as Home
 import Model exposing (Model)
 import Msg exposing (Msg(..))
 import Route
+import Views.Home.Update as Home
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =

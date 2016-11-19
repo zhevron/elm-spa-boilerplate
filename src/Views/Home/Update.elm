@@ -1,7 +1,7 @@
 module Views.Home.Update exposing (update)
 
-import Views.Home.Msg exposing (Msg(..))
 import Model exposing (Model)
+import Views.Home.Msg exposing (Msg(..))
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
