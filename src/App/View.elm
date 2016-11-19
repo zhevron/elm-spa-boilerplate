@@ -1,10 +1,10 @@
-module View exposing (view)
+module App.View exposing (view)
 
 import Html exposing (Html, text)
 
-import Model exposing (Model)
-import Msg exposing (Msg(..))
-import Route exposing (Route(..))
+import App.Model exposing (Model)
+import App.Msg exposing (Msg(..))
+import App.Route exposing (Route(..))
 import Views.Home.View as Home
 
 view : Model -> Html Msg

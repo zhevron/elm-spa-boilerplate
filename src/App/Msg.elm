@@ -1,8 +1,8 @@
-module Msg exposing (Msg(..))
+module App.Msg exposing (Msg(..))
 
 import Navigation
 
-import Route exposing (Route)
+import App.Route exposing (Route)
 import Views.Home.Msg as Home
 
 type Msg

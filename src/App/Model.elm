@@ -1,8 +1,8 @@
-module Model exposing (Model, initialModel)
+module App.Model exposing (Model, initialModel)
 
 import Navigation
 
-import Route exposing (Route)
+import App.Route exposing (Route)
 
 type alias Model =
     { history : List (Maybe Route)
@@ -11,6 +11,6 @@ type alias Model =
 
 initialModel : Navigation.Location -> Model
 initialModel location =
-    { history = [ Route.fromLocation location ]
+    { history = [ App.Route.fromLocation location ]
     , content = "Hello world"
     }

@@ -1,10 +1,10 @@
-module Update exposing (update)
+module App.Update exposing (update)
 
 import Navigation
 
-import Model exposing (Model)
-import Msg exposing (Msg(..))
-import Route
+import App.Model exposing (Model)
+import App.Msg exposing (Msg(..))
+import App.Route
 import Views.Home.Update as Home
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -18,16 +18,15 @@ update msg model =
         
         NavigateTo route ->
             let
-                url = Route.urlFor route
+                url = App.Route.urlFor route
             in
                 (model, Navigation.newUrl url)
         
         UrlChange location ->
             let
                 history =
-                    (Route.fromLocation location) :: model.history
+                    (App.Route.fromLocation location) :: model.history
             in
-                Debug.log location.hash
                 { model | history = history } ! []
         
         NoOp ->

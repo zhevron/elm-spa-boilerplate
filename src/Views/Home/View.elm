@@ -2,7 +2,7 @@ module Views.Home.View exposing (view)
 
 import Html exposing (Html, text)
 
-import Model exposing (Model)
+import App.Model exposing (Model)
 import Views.Home.Msg exposing (Msg(..))
 
 view : Model -> Html Msg
