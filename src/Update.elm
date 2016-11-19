@@ -2,7 +2,7 @@ module Update exposing (update)
 
 import Navigation
 
-import Views.Home.Update
+import Views.Home.Update as Home
 import Model exposing (Model)
 import Msg exposing (Msg(..))
 import Route
@@ -12,7 +12,7 @@ update msg model =
     case msg of
         HomeMsg subMsg ->
             let
-                (newModel, cmd) = Views.Home.Update.update subMsg model
+                (newModel, cmd) = Home.update subMsg model
             in
                 (newModel, Cmd.map HomeMsg cmd)
         
