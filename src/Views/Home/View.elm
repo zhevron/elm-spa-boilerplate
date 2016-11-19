@@ -1,8 +1,8 @@
-module Components.Home.View exposing (view)
+module Views.Home.View exposing (view)
 
 import Html exposing (Html, text)
 
-import Components.Home.Msg exposing (Msg(..))
+import Views.Home.Msg exposing (Msg(..))
 import Model exposing (Model)
 
 view : Model -> Html Msg

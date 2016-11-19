@@ -2,11 +2,11 @@ module Msg exposing (Msg(..))
 
 import Navigation
 
-import Components.Home.Msg
+import Views.Home.Msg
 import Route exposing (Route) 
 
 type Msg
-    = HomeMsg Components.Home.Msg.Msg
+    = HomeMsg Views.Home.Msg.Msg
     | NavigateTo Route
     | UrlChange Navigation.Location
     | NoOp

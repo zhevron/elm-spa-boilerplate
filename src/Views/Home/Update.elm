@@ -1,6 +1,6 @@
-module Components.Home.Update exposing (update)
+module Views.Home.Update exposing (update)
 
-import Components.Home.Msg exposing (Msg(..))
+import Views.Home.Msg exposing (Msg(..))
 import Model exposing (Model)
 
 update : Msg -> Model -> ( Model, Cmd Msg )

@@ -2,7 +2,7 @@ module View exposing (view)
 
 import Html exposing (Html, text)
 
-import Components.Home.View
+import Views.Home.View
 import Model exposing (Model)
 import Msg exposing (Msg(..))
 import Route exposing (Route(..))
@@ -24,7 +24,7 @@ viewForRoute model =
     in
         case route of
             Just Home ->
-                Html.map HomeMsg (Components.Home.View.view model)
+                Html.map HomeMsg (Views.Home.View.view model)
             
             Nothing ->
                 text "404"
