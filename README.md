@@ -7,8 +7,10 @@ __DISCLAIMER:__ This is merely a test project for an SPA in Elm 0.18 to create a
 ## Project Structure
 
 ```text
-src/
-  App/
+public/              -- Contains all static files.
+  index.html         -- Entry point HTML page connecting the Elm and CSS code.
+source/              -- Contains all the Elm source code.
+  App/               -- Contains all application-wide modules.
     Model.elm        -- Defines the app model. Do not use view-specific models.
     Msg.elm          -- Defines app-wide messages. Use view-specific messages where possible.
     Route.elm        -- Defines the app routes as well as the URLs.
@@ -22,6 +24,8 @@ src/
       Update.elm     -- Handles messages for the view.
       View.elm       -- Contains one or more templates for this view.
   Main.elm           -- Contains the logic to start the app.
+stylesheets/         -- Contains the CSS/SASS code.
+  main.scss          -- Entry point CSS/SASS file automatically loaded in index.html.
 ```
 
 ## How can I link from one view to another?
