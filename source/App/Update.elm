@@ -1,6 +1,7 @@
 module App.Update exposing (update)
 
 import Navigation
+import Ui.App
 
 import App.Model exposing (Model)
 import App.Msg exposing (Msg(..))
@@ -10,6 +11,11 @@ import Views.Home.Update as Home
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
+        App subMsg ->
+            let
+                (app, effect) = Ui.App.update subMsg model.app
+            in
+                ({ model | app = app }, Cmd.map App effect)
         HomeMsg subMsg ->
             let
                 (newModel, cmd) = Home.update subMsg model
