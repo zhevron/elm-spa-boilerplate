@@ -1,7 +1,6 @@
 module App.View exposing (view)
 
 import Html exposing (Html, div, span, text)
-import Html.Attributes exposing (id)
 import Ui
 import Ui.App
 import Ui.Header
